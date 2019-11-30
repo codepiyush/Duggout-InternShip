@@ -1,6 +1,9 @@
-body {
+*{
     padding: 0;
     margin: 0;
+}
+body {
+    margin: 50px;
     background-color: rgb(241, 239, 234);
 }
 .container {
@@ -19,12 +22,16 @@ body {
 .flagView {
     display: inline;
 }
+h3{
+    padding-bottom: 20px;
+}
 .countryName{
     padding : 7px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center
 }
 .loss{
+    padding: 8px;
     color: grey;
 }
 .win{
@@ -34,13 +41,20 @@ body {
     display: flex;
     position: relative;
     justify-content: space-between;
+    padding: 20px;
 }
 .runs{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 #matchResult {
     font-size: 20px;
-    color: rgb(68, 69, 70)
-    
+    color: rgb(68, 69, 70);
+    padding-top: 50px;
 }
+.runsContainer{
+    display: 'flex';
+    justify-content: 'center';
+    flex-direction: 'column';
+    align-items: flex-end;
+}   

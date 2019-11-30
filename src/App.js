@@ -45,29 +45,40 @@ class App extends React.Component {
                 <p>
                     {this.state.desc}
                 </p>
-                <div className= 'resultDisplay'>
+                <div className='resultDisplay'>
                     <div className='flagView'>
-                        <div>
-                            <img src={this.state.bang.flag} alt="" height='40' widht='30' />
 
-                            <span className="countryName loss"> {this.state.bang.name} </span>
+                        <div style={{ display: 'flex', justifyContent: 'center', padding: '10px' }}>
+                            <div >
+                                <img src={this.state.bang.flag} alt="" height='40' widht='30' />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                <span className="countryName loss"> {this.state.bang.name} </span>
+                            </div>
                         </div>
-                        <div >
-
-                            <img src={this.state.ind.flag} alt="" height='40' widht='30' />
-                            <span className="countryName win" > {this.state.ind.name} </span>
+                        <div style={{ display: 'flex', padding: '10px'}}>
+                            <div>
+                                <img src={this.state.ind.flag} alt="" height='40' widht='30' />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                <span className="countryName win"> {this.state.ind.name} </span>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <p className= "runs loss">
-                            {`${this.state.bang.inning1run} & ${this.state.bang.inning2run} (${this.state.bang.overs})`}
-                        </p>
-                        <p className= "runs win">
-                            {`${this.state.ind.inning1run} / ${this.state.ind.wicket}d`}
-                        </p>
+                    <div className = 'runsContainer' style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+                        <div>
+                            <p className="runs loss">
+                                {`${this.state.bang.inning1run} & ${this.state.bang.inning2run} (${this.state.bang.overs})`}
+                            </p>
+                        </div>
+                        <div>
+                            <p className="runs win">
+                                {`${this.state.ind.inning1run} / ${this.state.ind.wicket}d`}
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <p id = 'matchResult'>
+                <p id='matchResult'>
                     {this.state.matchResult}
                 </p>
             </div>
